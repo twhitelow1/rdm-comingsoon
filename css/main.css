@@ -5,7 +5,7 @@
 :root {
   --white-color:                  #ffffff;
   --primary-color:                #52c0ff;
-  --secondary-color:              #0763ee;
+  --secondary-color:              #0f63ff;
   --section-bg-color:             #005a8f;
   --custom-btn-bg-color:          #0763ee;
   --custom-btn-bg-hover-color:    #150072;
@@ -355,7 +355,7 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .sticky-wrapper.is-sticky .navbar {
@@ -388,6 +388,7 @@ strong {
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .navbar-nav .nav-link.active, 
@@ -469,7 +470,7 @@ strong {
   position: relative;
   overflow: hidden;
   padding-top: 100px;
-  height: calc(100vh - 51px);
+  height: 100vh ;
 }
 
 .hero-section small {
