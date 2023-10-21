@@ -4,12 +4,12 @@
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #52c0ff;
-  --secondary-color:              #0f63ff;
-  --section-bg-color:             #005a8f;
+  --primary-color:                #224d84;
+  --secondary-color:              #8fc8f3;
+  --section-bg-color:             #224d84;
   --custom-btn-bg-color:          #0763ee;
   --custom-btn-bg-hover-color:    #150072;
-  --dark-color:                   #000000;
+  --dark-color:                   #224d84;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
@@ -501,7 +501,7 @@ strong {
 -----------------------------------------*/
 .about-section {
   /* background-image: url('../images/edward-unsplash-blur.jpg'); */
-  background-color: #000;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -576,6 +576,66 @@ strong {
   height: 100%;
 }
 
+/*---------------------------------------
+  Properties              
+-----------------------------------------*/
+.properties-section{
+  background-color: #c9e8fd;
+}
+
+.property-thumb {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.property-image {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+
+.property-thumb:hover .artists-hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.property-hover {
+  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.842);
+  border-radius: var(--border-radius-medium);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  margin: 20px;
+  padding: 35px;
+  transition: all 0.5s ease;
+  transform: translateY(100%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.property-hover p strong {
+  color: var(--white-color);
+  display: inline-block;
+  min-width: 180px;
+  margin-right: 20px;
+}
+
+.property-hover p a {
+  color: var(--secondary-color);
+}
+
+.property-hover p a:hover {
+  color: var(--white-color);
+}
+
+.property-hover hr {
+  margin: 1.5rem 0;
+}
 
 /*---------------------------------------
   ARTISTS              
@@ -599,8 +659,7 @@ strong {
 }
 
 .artists-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(0, 0, 0, 0.842);
+  background-color: #224d84a8;
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -816,7 +875,7 @@ strong {
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  background-color: var(--dark-color);
+  background-color: #031e40;
   position: relative;
   overflow: hidden;
   padding-bottom: 30px;
@@ -833,7 +892,7 @@ strong {
 
 .site-footer-bottom {
   border-top: 1px solid #1f1c1c;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .site-footer-title {
