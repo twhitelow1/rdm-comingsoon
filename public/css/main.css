@@ -1073,8 +1073,9 @@ strong {
     font-size: 20px;
   }
   .hero-content{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%
   }
   .hero-content img{
     display: block;
