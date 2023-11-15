@@ -56,11 +56,12 @@
             </div>
 
             <div class="video-wrap">
-                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                <video id="videoElement" autoplay loop muted class="custom-video" poster="">
                     <source src="video/EastVail.mp4" type="video/mp4" muted >
 
                     Your browser does not support the video tag.
                 </video>
+                <img id=""imageElement" src="images/hero-bg.jpg" alt="Beaver Creek Mountain" class="custom-image" style="display: none;">
             </div>
         </section>
 
@@ -143,7 +144,19 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
       </script>
-
+      <script>
+        // Function to detect device type
+      function checkDevice() {
+        // This is a simple check. For more robust detection, consider using a library like Modernizr
+        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+            document.getElementById('videoElement').style.display = 'none';
+            document.getElementById('imageElement').style.display = 'block';
+        }
+    }
+    
+    // Run the function when the document loads
+    document.addEventListener('DOMContentLoaded', checkDevice);
+      </script>
 </body>
 
 </html>
