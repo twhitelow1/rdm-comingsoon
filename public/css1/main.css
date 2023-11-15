@@ -1084,5 +1084,10 @@ strong {
     margin-right: auto;
     width: 100%;
   }
+  .custom-video, .custom-image {
+    width: 100%;
+    height: auto;
+    /* Additional styling as needed */
+}
 }
 
