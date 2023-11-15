@@ -472,6 +472,7 @@ strong {
   overflow: hidden;
   padding-top: 20px;
   height: 100vh ;
+  min-height: 300px;
 }
 
 .hero-section small {
