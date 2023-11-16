@@ -1,162 +1,105 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Preview Page</title>
+    <style>
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+        :root {
+            --dark-color: rgb(168, 206, 255); /* Define your dark color here */
+        }
 
-    <title>Resort Development Marketing</title>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: var(--dark-color);
+        }
+        
+        .section-overlay {
+            background-color: rgb(59, 106, 168);
+            color:#000000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            pointer-events: none;
+        }
 
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        .hero-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+        .mobile-background {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/main.css" rel="stylesheet">
-
-
+        .coming-soon-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            z-index: 2;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px #000000;
+        }
+    </style>
 </head>
-
 <body>
-
-    <main>
-
-        <section class="hero-section" id="section_1">
-            <div class="section-overlay"></div>
-
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="row">
-
-                    <div class="col-12 mt-auto mb-5 text-center">
-                        <small></small>
-                        <div class="hero-content" style="margin-left: auto; margin-right: auto; width: 80%;">
-                            <img src="/images/logotrans.png" alt="" style=" display: block; margin-left: auto; margin-right: auto; width: 100%;">
-                            <h1 class="text-white mb-5" style="text-shadow: 2px 2px #000000;">Under Construction</h1>
-                            <h3 class="text-white" style=" text-shadow: 2px 2px #000000;">Interested in properties or property management services?</p>
-                            <h3 class="text-white" style="text-shadow: 2px 2px #000000;">Please call Matt at <a class="text-white" href="tel:9703760708">(970) 376 - 0708</a></p>
-                            <h3 class="text-white" style="text-shadow: 2px 2px #000000;">Alternatively, you can email Matt at <a class="text-white text-decoration-underline" href="mailto:mattbreslervail@yahoo.com">mattbreslervail@yahoo.com</a></p>
-                        </div>
-                        <!-- <a class="btn custom-btn smoothscroll" href="#section_2">View Homes</a> -->
+    <div class="hero-section" id="section_1">
+        <div class="section-overlay"></div>
+            <video id="videoElement" autoplay loop muted>
+                <source src="video/EastVail.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="mobile-background" id="mobileBackground" style="background-image: url('path/to/mobile/image.jpg');"></div>
+            <div class="coming-soon-message">
+            
+                <div class="col-12 mt-auto mb-5 text-center">
+                    <small></small>
+                    <div class="hero-content" style="margin-left: auto; margin-right: auto; width: 80%;">
+                        <img src="/images/logotrans.png" alt="" style=" display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                        <h1 class="mb-5" style="text-shadow: 2px 2px #000000;">UNDER CONSTRUCTION</h1>
+                        <h3 class="" style=" text-shadow: 2px 2px #000000;">Interested in properties or property management services?</p>
+                        <h3 class="" style="text-shadow: 2px 2px #000000;">Please call Matt at <a class="text-white" href="tel:9703760708">(970) 376 - 0708</a></p>
+                        <h3 style="text-shadow: 2px 2px #000000;">Alternatively, you can email Matt at <a class="text-white text-decoration-underline" href="mailto:mattbreslervail@yahoo.com">mattbreslervail@yahoo.com</a></p>
                     </div>
-
-                   <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-
-                    </div>
+                    <!-- <a class="btn custom-btn smoothscroll" href="#section_2">View Homes</a> -->
                 </div>
             </div>
+    </div>
 
-            <div class="video-wrap">
-                <video id="videoElement" autoplay loop muted class="custom-video" poster="">
-                    <source src="video/EastVail.mp4" type="video/mp4" muted >
-
-                    Your browser does not support the video tag.
-                </video>
-                <img id="imageElement" src="images/comingsoonbg.jpg" alt="Beaver Creek Mountain" class="custom-image" style="display: none;">
-            </div>
-        </section>
-
-    </main>
-
-
-    <footer class="site-footer">
-
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row ">
-
-                    <div class="col-lg-12 col-12 mt-5 d-flex justify-content-center flex-column align-items-center ">
-
-                        <p class="copyright-text">Copyright © 2023 Resort Development Marketing</p>
-                        <p class="copyright-text">Website Developed by: <a href="https://todd.whitelow.tech" style="color: #8fc8f3 !important;">Todd Whitelow</a></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <!-- <script src="js/click-scroll.js"></script> -->
-    <!-- <script src="js/scroll.js"></script> -->
     <script>
-        // Function to handle smooth scrolling
-        function scrollToSection(targetId) {
-            var targetSection = document.getElementById(targetId);
-    
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-    
-                // Mark the clicked link as active
-                var links = document.querySelectorAll('a.nav-link');
-                links.forEach(function (link) {
-                    link.classList.remove('active');
-                });
-                document.querySelector('a[href="#' + targetId + '"]').classList.add('active');
+        function checkDevice() {
+            if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                document.getElementById('videoElement').style.display = 'none';
+                document.getElementById('mobileBackground').style.display = 'block';
             }
         }
-    
-        // Add click event listeners to navigation links
-        document.addEventListener('DOMContentLoaded', function () {
-            var links = document.querySelectorAll('a.nav-link');
-            links.forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    var targetId = this.getAttribute('href').substring(1);
-                    scrollToSection(targetId);
-                });
-            });
-        });
+        document.addEventListener('DOMContentLoaded', checkDevice);
     </script>
-    <script src="js/custom.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyDDn2kA6srAbDyiA6BGPIRi0lp2K3GP5R4",
-          authDomain: "resort-development-marketing.firebaseapp.com",
-          projectId: "resort-development-marketing",
-          storageBucket: "resort-development-marketing.appspot.com",
-          messagingSenderId: "457369783587",
-          appId: "1:457369783587:web:dd12bfa9f1c1cf4c999096",
-          measurementId: "G-MY4F2C9VH3"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-      <script>
-        // Function to detect device type
-      function checkDevice() {
-        // This is a simple check. For more robust detection, consider using a library like Modernizr
-        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-            document.getElementById('videoElement').style.display = 'none';
-            document.getElementById('imageElement').style.display = 'block';
-        }
-    }
-    
-    // Run the function when the document loads
-    document.addEventListener('DOMContentLoaded', checkDevice);
-      </script>
 </body>
-
 </html>
