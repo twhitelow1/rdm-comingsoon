@@ -8,7 +8,36 @@
 
         :root {
             --dark-color: rgb(168, 206, 255); /* Define your dark color here */
-        }
+            --white-color:                  #ffffff;
+            --primary-color:                #224d84;
+            --secondary-color:              #8fc8f3;
+            --section-bg-color:             #224d84;
+            --custom-btn-bg-color:          #0763ee;
+            --custom-btn-bg-hover-color:    #150072;
+            --p-color:                      #717275;
+            --border-color:                 #7fffd4;
+            --link-hover-color:             #B22727;
+
+            --body-font-family:             'Outfit', sans-serif;
+
+            --h1-font-size:                 2em;
+            --h2-font-size:                 1.5em;
+            --h3-font-size:                 1em;
+            --h4-font-size:                 28px;
+            --h5-font-size:                 24px;
+            --h6-font-size:                 22px;
+            --p-font-size:                  18px;
+            --btn-font-size:                14px;
+            --copyright-font-size:          16px;
+
+            --border-radius-large:          100px;
+            --border-radius-medium:         20px;
+            --border-radius-small:          10px;
+
+            --font-weight-light:            300;
+            --font-weight-normal:           400;
+            --font-weight-bold:             700;
+            }
 
         body {
             margin: 0;
@@ -16,6 +45,18 @@
         }
         a {
             color: var(--dark-color);
+        }
+
+        h1 {
+                font-size: var(--h1-font-size);
+            }
+
+        h2 {
+            font-size: var(--h2-font-size); 
+        }
+
+        h3 {
+            font-size: var(--h3-font-size);
         }
         
         .section-overlay {
@@ -34,6 +75,7 @@
             position: relative;
             width: 100%;
             height: 100vh;
+            min-height: 900px;
             overflow: hidden;
             text-align: center;
             color: white;
@@ -58,7 +100,7 @@
 
         .coming-soon-message {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 2em;
@@ -67,6 +109,10 @@
             text-shadow: 2px 2px #000000;
         }
     </style>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <div class="hero-section" id="section_1">
@@ -78,11 +124,11 @@
             <div class="mobile-background" id="mobileBackground" style="background-image: url('path/to/mobile/image.jpg');"></div>
             <div class="coming-soon-message">
             
-                <div class="col-12 mt-auto mb-5 text-center">
+                <div class="col-12 mt-auto text-center">
                     <small></small>
                     <div class="hero-content" style="margin-left: auto; margin-right: auto; width: 80%;">
                         <img src="/images/logotrans.png" alt="" style=" display: block; margin-left: auto; margin-right: auto; width: 100%;">
-                        <h1 class="mb-5" style="text-shadow: 2px 2px #000000;">UNDER CONSTRUCTION</h1>
+                        <h1 class="" style="text-shadow: 2px 2px #000000;">UNDER CONSTRUCTION</h1>
                         <h3 class="" style=" text-shadow: 2px 2px #000000;">Interested in properties or property management services?</p>
                         <h3 class="" style="text-shadow: 2px 2px #000000;">Please call Matt at <a class="text-white" href="tel:9703760708">(970) 376 - 0708</a></p>
                         <h3 style="text-shadow: 2px 2px #000000;">Alternatively, you can email Matt at <a class="text-white text-decoration-underline" href="mailto:mattbreslervail@yahoo.com">mattbreslervail@yahoo.com</a></p>
